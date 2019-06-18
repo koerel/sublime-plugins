@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[<?php
+
+namespace App\Http\Controllers;
+
+use Bagaaravel\Api\JsonApiController;
+
+class $1Controller extends JsonApiController
+{
+    public static \$model = '$2';
+
+    public function defaults()
+    {
+        //
+    }
+}
+
+]]></content>
+  <tabTrigger>controller</tabTrigger>
+  <description>Make new PHP controller</description>
+</snippet>

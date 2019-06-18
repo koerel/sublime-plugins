@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+protected \$guarded = [];
+]]></content>
+<tabTrigger>noguard</tabTrigger>
+<description>Set $guarded to empty</description>
+<scope>source.php</scope>
+</snippet>

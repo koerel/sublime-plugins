@@ -1,0 +1,11 @@
+<snippet>
+<content><![CDATA[
+public function ${1}()
+{
+    return \$this->belongsTo(${1/\b(\w*)\b/\u\1/g}::class);
+}
+]]></content>
+<tabTrigger>belto</tabTrigger>
+<description>belongsTo</description>
+<scope>source.php</scope>
+</snippet>

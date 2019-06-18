@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+public function ${1}()
+{
+    return \$this->hasMany($2::class);
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>hasman</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.php</scope>
+</snippet>
