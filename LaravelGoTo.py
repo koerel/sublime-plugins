@@ -9,8 +9,8 @@ def go_to(view, location):
 class LaravelGoToCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         config = sublime.load_settings(CONFIG_FILE)
-        locale = config.get("default_locale")
-        fallback = config.get("fallback_command")
+        locale = "en"
+        fallback = "goto_definition_scope"
         folder = self.view.window().extract_variables()['folder']
         for region in self.view.sel():
             if region.empty():
@@ -19,7 +19,7 @@ class LaravelGoToCommand(sublime_plugin.TextCommand):
                 view = re.search('view\(\'([a-zA-Z.-_]*)\'\)', content)
                 config = re.search('config\(\'([a-zA-Z.-_]*)\'\)', content)
                 env = re.search('env\(\'([a-zA-Z.-_]*)\',*\s*\'?([a-zA-Z.-_]*)\'*\)', content)
-                trans = re.search('[trans|__]\(\'([a-zA-Z.-_]*)\'\)', content)
+                trans = re.search('[trans|__]*\(\'([a-zA-Z.-_]*)\'\)', content)
                 if view:
                     parts = view.group(1).split('.')
                     file = parts.pop()

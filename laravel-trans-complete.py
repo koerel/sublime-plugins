@@ -6,6 +6,8 @@ from subprocess import check_output
 import re
 import json
 
+global files
+
 def plugin_loaded():
     global files
     global path

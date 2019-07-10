@@ -1,6 +1,0 @@
-{
-    // This is used when navigating to to the translations folder (e.g. /resources/lang/en/...)
-    "default_locale": "en",
-    // This is called when you run the command not in a trans() or view() command
-    "fallback_command": "goto_definition"
-}
